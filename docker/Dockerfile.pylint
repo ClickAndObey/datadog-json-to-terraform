@@ -1,0 +1,14 @@
+# 3.9 gives errors like Value 'Union' is unsubscriptable (unsubscriptable-object) due to a known issue that is being
+# worked on. Eventually we should try and upgrade and see if it is fixed.
+FROM python:3.8-slim
+
+RUN pip install pylint
+
+WORKDIR /workspace
+
+COPY src/.pylintrc /workspace
+
+COPY src/main/python /src_workspace
+COPY src/main/scripts /workspace
+COPY src/test/python /workspace
+RUN touch /src_workspace/__init__.py
