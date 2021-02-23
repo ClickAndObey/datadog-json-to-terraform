@@ -5,7 +5,7 @@ Repository used to create a docker image that can translate json output from dat
 ## Usage
 
 ```bash
-@docker run \
+docker run \
   --rm \
   --name ${APP_CONTAINER_NAME} \
   ghcr.io/clickandobey-datadog-json-to-terraform-app:1.0.0 \
