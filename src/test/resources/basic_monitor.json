@@ -1,0 +1,28 @@
+{
+    "name": "Basic Datadog Metric Count: 2",
+    "type": "query alert",
+    "query": "some query",
+    "message": "Some Message about how to\n\n handle it.",
+    "tags": [
+        "tag:1",
+        "tag:2"
+    ],
+    "options": {
+        "notify_audit": false,
+        "locked": true,
+        "silenced": {},
+        "include_tags": true,
+        "renotify_interval": 0,
+        "thresholds": {
+            "critical": 2,
+            "warning": 3,
+            "warning_recovery": 4,
+            "critical_recovery": 3
+        },
+        "escalation_message": "escalation\n\n message",
+        "no_data_timeframe": 2,
+        "new_host_delay": 300,
+        "require_full_window": true,
+        "notify_no_data": false
+    }
+}
