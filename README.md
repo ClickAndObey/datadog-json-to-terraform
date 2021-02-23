@@ -6,13 +6,13 @@ Repository used to create a docker image that can translate json output from dat
 
 ```bash
 @docker run \
-	--rm \
-	--name ${APP_CONTAINER_NAME} \
-	ghcr.io/clickandobey-datadog-json-to-terraform-app:1.0.0 \
-		monitor \
-		"`cat ${JSON_FILE}`" \
-		--verbose \
-		> ${OUTPUT_FILE}
+  --rm \
+  --name ${APP_CONTAINER_NAME} \
+  ghcr.io/clickandobey-datadog-json-to-terraform-app:1.0.0 \
+    monitor \
+    "`cat ${JSON_FILE}`" \
+    --verbose \
+    > ${OUTPUT_FILE}
 ```
 
 ## Quick Start
